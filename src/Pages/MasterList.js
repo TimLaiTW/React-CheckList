@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
-// import ShowList from '../../views/showlist';
-// import ListForm from '../../views/listform';
-// import AddItem from '../AddItem';
+import ShowMasterList from '../Components/Templates/ShowMasterList';
+import AddButton from '../Components/Actions/AddButton';
+import InputForm from '../Components/Templates/InputForm';
 const Div = styled.div`
         background-color: var(--primary-background);
         width: 25%;
@@ -16,12 +16,12 @@ export default class MasterList extends Component {
         return (
             <Div>
                 <div className='header'>Lists</div>
-                {/* <ShowList lists={lists} editCurrentList={editCurrentList}/>
-                
+                <ShowMasterList lists={lists} editCurrentList={editCurrentList}/>
+                 
                 {!newList && 
-                <AddItem startAddingTask={startAddingList}>Add new list</AddItem>}
+                <AddButton startAddingTask={startAddingList}>Add new list</AddButton>}
                 {newList && 
-                <ListForm onSubmit={addNewList}/>} */}
+                <InputForm onSubmit={addNewList}/>}
             </Div>
         )
     }

@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-// import TodoList from './views/todolist';
-// import SideBar from './components/Templates/SideBar';
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import MasterList from './Pages/MasterList';
 import Main from './Pages/Main';
 import './App.css';
@@ -49,7 +46,7 @@ export default class App extends Component {
     this.setState({
       showNewListButton: true
     })
-}
+  }
 
   render() {
     return (
@@ -66,7 +63,6 @@ export default class App extends Component {
             id={this.state.currentListId}
             title={this.state.currentListTitle}
           />
-
       </>
     )
   }
