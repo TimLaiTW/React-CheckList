@@ -8,7 +8,7 @@ const Form = styled.form`
 `;
 export default class InputForm extends Component {
     state = {
-        title: ""
+        name: ""
     };
 
     handleChange = (event) => {
@@ -18,10 +18,11 @@ export default class InputForm extends Component {
     };
     handleSubmit = (event) => {
         event.preventDefault(); 
-        if (this.state.title.length > 0 && this.state.title.length < 20){
+        if (this.state.name.length > 0 && this.state.name.length < 20){
             this.props.onSubmit({
                 id: nextId(),
-                title: this.state.title,
+                name: this.state.name,
+                checked: false
             })
         } 
         else {
@@ -32,9 +33,9 @@ export default class InputForm extends Component {
         return (
             <Form onSubmit={this.handleSubmit}>
                 <Input 
-                    name="title" 
+                    name="name" 
                     placeholder="Enter new list"
-                    value={this.state.title}
+                    value={this.state.name}
                     handleChange={this.handleChange}
                 />
                 <SaveButton>Save!</SaveButton>

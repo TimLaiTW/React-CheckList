@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
-import ShowMasterList from '../Components/Templates/ShowMasterList';
+import ShowMasterLists from '../Components/Templates/ShowMasterLists';
 import AddButton from '../Components/Actions/AddButton';
 import InputForm from '../Components/Templates/InputForm';
 const Div = styled.div`
@@ -16,7 +16,7 @@ export default class MasterList extends Component {
         return (
             <Div>
                 <div className='header'>Lists</div>
-                <ShowMasterList lists={lists} editCurrentList={editCurrentList}/>
+                <ShowMasterLists lists={lists} editCurrentList={editCurrentList}/>
                  
                 {!newList && 
                 <AddButton startAddingTask={startAddingList}>Add new list</AddButton>}

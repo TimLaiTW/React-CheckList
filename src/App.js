@@ -17,7 +17,7 @@ export default class App extends Component {
 
   addNewList(list){
       this.setState({
-        masterLists: [list, ...this.state.masterLists],
+        masterLists: [...this.state.masterLists, list],
         showNewListButton: false,
       });
   };
@@ -35,7 +35,7 @@ export default class App extends Component {
     })
 
     if (currentList) {
-      var listTitle = currentList.map(list => { return list.title })
+      var listTitle = currentList.map(list => { return list.name })
       this.setState({
         currentListTitle: listTitle
       });

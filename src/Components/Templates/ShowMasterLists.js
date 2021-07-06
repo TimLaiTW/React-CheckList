@@ -18,9 +18,7 @@ const Div = styled.div`
         display: block
     }
 `;
-
-
-const ShowMasterList = (props) => {
+const ShowMasterLists = (props) => {
     function handleClick(event){
         event.preventDefault();
         props.editCurrentList(event.target.id);
@@ -30,11 +28,11 @@ const ShowMasterList = (props) => {
             {props.lists.map(list => (
                 <button key={list.id} onClick={handleClick}>
                     <div  id={list.id}>
-                        {list.title}
+                        {list.name}
                     </div>
                 </button>
             ))}
         </Div>
     );
 }
-export default ShowMasterList;
+export default ShowMasterLists;

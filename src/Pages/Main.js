@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-// import TodoForm from './todoform';
-// import AddItem from '../components/AddItem';
-// import ShowTask from './showtask';
+import AddButton from '../Components/Actions/AddButton';
+import InputForm from '../Components/Templates/InputForm';
+import ShowTaskLists from '../Components/Templates/ShowTaskLists';
 const Div = styled.div`
     margin-left: 25%;
     min-height: 100vh;
@@ -59,7 +59,7 @@ export default class Main extends React.Component{
 
     deleteTask = (taskId) => {
         var selectedList = this.state.taskList.find(todo => todo.id === this.props.id);
-        selectedList.tasks = selectedList.tasks.filter((task => task.taskId !== taskId))
+        selectedList.tasks = selectedList.tasks.filter((task => task.id !== taskId))
         const updatedList = this.state.taskList.map(tasks => {
             if(tasks.id === this.props.id){
                 return selectedList
@@ -74,7 +74,7 @@ export default class Main extends React.Component{
     editTaskName = (taskId, name) => {
         var selectedList = this.state.taskList.find(todo => todo.id === this.props.id);
         selectedList.tasks = selectedList.tasks.map(task => {
-            if (task.taskId === taskId){
+            if (task.id === taskId){
                 return {...task, task: name}
             }
             return task;
@@ -93,7 +93,7 @@ export default class Main extends React.Component{
     editTaskCheck = (taskId, check) => {
         var selectedList = this.state.taskList.find(todo => todo.id === this.props.id);
         selectedList.tasks = selectedList.tasks.map(task => {
-            if (task.taskId === taskId){
+            if (task.id === taskId){
                 return {...task, checked: check}
             }
             return task;
@@ -107,14 +107,12 @@ export default class Main extends React.Component{
         this.setState({
             taskList: updatedList
         })
-
-        console.log(this.state.taskList)
     };
 
     render(){
         const {id, title} = this.props
         var selectedList = this.state.taskList.find(todo => todo.id === id);
-        if(selectedList){selectedList["tasks"].map(task => console.log(task.task))}
+        if(selectedList){console.log(selectedList)}
 
         if (!this.props.title){
             return (
@@ -131,19 +129,19 @@ export default class Main extends React.Component{
                     {title}
                 </h1>
                 
-                {/* {typeof(selectedList) !== 'undefined' &&
-                    <ShowTask 
+                {typeof(selectedList) !== 'undefined' &&
+                    <ShowTaskLists 
                         taskList={selectedList.tasks}
                         deleteTask={this.deleteTask}
                         editTaskName={this.editTaskName}
                         editTaskCheck={this.editTaskCheck}
                     />
-                } */}
+                }
 
-                {/* {!this.state.showAddingTask && 
-                <AddItem startAddingTask={this.startAddingTask}>Add new task</AddItem>}
+                {!this.state.showAddingTask && 
+                <AddButton startAddingTask={this.startAddingTask}>Add new task</AddButton>}
                 {this.state.showAddingTask && 
-                <TodoForm onSubmit={this.addTask}/>} */}
+                <InputForm onSubmit={this.addTask}/>}
             </Div>
 
         )
