@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/React-Checklist/static/css/main.aaeb0ce7.chunk.css",
-    "main.js": "/React-Checklist/static/js/main.1f325f3a.chunk.js",
-    "main.js.map": "/React-Checklist/static/js/main.1f325f3a.chunk.js.map",
+    "main.css": "/React-Checklist/static/css/main.bcb287ce.chunk.css",
+    "main.js": "/React-Checklist/static/js/main.fb3737ae.chunk.js",
+    "main.js.map": "/React-Checklist/static/js/main.fb3737ae.chunk.js.map",
     "runtime-main.js": "/React-Checklist/static/js/runtime-main.642980a3.js",
     "runtime-main.js.map": "/React-Checklist/static/js/runtime-main.642980a3.js.map",
     "static/js/2.83ec470c.chunk.js": "/React-Checklist/static/js/2.83ec470c.chunk.js",
     "static/js/2.83ec470c.chunk.js.map": "/React-Checklist/static/js/2.83ec470c.chunk.js.map",
     "index.html": "/React-Checklist/index.html",
-    "static/css/main.aaeb0ce7.chunk.css.map": "/React-Checklist/static/css/main.aaeb0ce7.chunk.css.map",
+    "static/css/main.bcb287ce.chunk.css.map": "/React-Checklist/static/css/main.bcb287ce.chunk.css.map",
     "static/js/2.83ec470c.chunk.js.LICENSE.txt": "/React-Checklist/static/js/2.83ec470c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.642980a3.js",
     "static/js/2.83ec470c.chunk.js",
-    "static/css/main.aaeb0ce7.chunk.css",
-    "static/js/main.1f325f3a.chunk.js"
+    "static/css/main.bcb287ce.chunk.css",
+    "static/js/main.fb3737ae.chunk.js"
   ]
 }
