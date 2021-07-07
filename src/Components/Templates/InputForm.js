@@ -19,11 +19,15 @@ export default class InputForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault(); 
         if (this.state.name.length > 0 && this.state.name.length < 20){
-            this.props.onSubmit({
-                id: nextId(),
-                name: this.state.name,
-                checked: false
-            })
+            if (this.props.status === 'rename'){
+                this.props.onSubmit(this.props.id, this.state.name)
+            }
+            else{
+                this.props.onSubmit({
+                    id: nextId(),
+                    name: this.state.name,
+                    checked: false
+                })}
         } 
         else {
             alert("Input length should more than 1 and no longer than 20!");
@@ -34,7 +38,7 @@ export default class InputForm extends Component {
             <Form onSubmit={this.handleSubmit}>
                 <Input 
                     name="name" 
-                    placeholder="Enter new list"
+                    placeholder={this.props.placeholder}
                     value={this.state.name}
                     handleChange={this.handleChange}
                 />

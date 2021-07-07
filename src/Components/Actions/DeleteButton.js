@@ -5,11 +5,13 @@ const Button = styled.button`
         color: red;
         cursor: pointer;
         transition: all .2s ease-in-out;
-        // transform: rotateZ(0deg);
-        // border-radius: 2px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 15px;
         &:hover{
             color: red;
-            transform: scale(1.2)
+            transform: scale(1.4)
         }
     `;
 const DeleteButton = (props) => {

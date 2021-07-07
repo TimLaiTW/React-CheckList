@@ -75,7 +75,7 @@ export default class Main extends React.Component{
         var selectedList = this.state.taskList.find(todo => todo.id === this.props.id);
         selectedList.tasks = selectedList.tasks.map(task => {
             if (task.id === taskId){
-                return {...task, task: name}
+                return {...task, name: name}
             }
             return task;
         });
@@ -141,7 +141,10 @@ export default class Main extends React.Component{
                 {!this.state.showAddingTask && 
                 <AddButton startAddingTask={this.startAddingTask}>Add new task</AddButton>}
                 {this.state.showAddingTask && 
-                <InputForm onSubmit={this.addTask}/>}
+                <InputForm 
+                    status='new list'
+                    placeholder='Enter new task'
+                    onSubmit={this.addTask}/>}
             </Div>
 
         )

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import DeleteButton from '../Actions/DeleteButton';
 import CheckBox from '../Actions/CheckBox';
 
+import InputForm from '../Templates/InputForm';
 
 // import ListForm from '../../views/listform';
 // import EditMode from '../editmode';
@@ -17,7 +18,6 @@ const ListitemTitle = styled.div`
     font-size: var(--secondory-font-size);
     font-family: var(--content-font);
     letter-spacing: 0.1rem;
-
     div {
         cursor: pointer;
     }
@@ -33,7 +33,11 @@ export default class Tasks extends Component {
 
     changeTitle = () => {
         this.setState({toggle: !this.state.toggle})
-        console.log(this.state.toggle)
+    }
+
+    handleRename = (id, name) => {
+        this.changeTitle()
+        this.props.editTaskName(id, name)
     }
     
     render() {
@@ -46,7 +50,14 @@ export default class Tasks extends Component {
                     checked={checked}
                     editTaskCheck={editTaskCheck}/>
                 <ListitemTitle>
-                    <div onClick={this.changeTitle}>{task}</div>
+                    {this.state.toggle ? 
+                    <div onClick={this.changeTitle}>{task}</div>:
+                    <InputForm 
+                        id={taskId}
+                        status='rename'
+                        placeholder={task}
+                        onSubmit={this.handleRename}/>
+                    }
 
                 </ListitemTitle>
                 <DeleteButton 

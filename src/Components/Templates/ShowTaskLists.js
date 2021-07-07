@@ -5,7 +5,7 @@ const Div = styled.div`
     width: 70%
 `;
 const ShowTaskLists = (props) => {
-    const { taskList, editTaskCheck, deleteTask} = props;
+    const { taskList, editTaskCheck, editTaskName, deleteTask} = props;
     console.log(taskList)
     return (
         <Div>
@@ -16,6 +16,7 @@ const ShowTaskLists = (props) => {
                     task={todo.name}
                     checked={todo.checked}
                     editTaskCheck={editTaskCheck}
+                    editTaskName={editTaskName}
                     deleteTask={deleteTask}
                 />
             ))}

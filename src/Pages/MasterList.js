@@ -21,7 +21,10 @@ export default class MasterList extends Component {
                 {!newList && 
                 <AddButton startAddingTask={startAddingList}>Add new list</AddButton>}
                 {newList && 
-                <InputForm onSubmit={addNewList}/>}
+                <InputForm 
+                    status='new list'
+                    placeholder='Enter new list'
+                    onSubmit={addNewList}/>}
             </Div>
         )
     }
