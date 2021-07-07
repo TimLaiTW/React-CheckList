@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 const Div = styled.div`
     text-align: center;
-    font-family: var(--header-font);
     letter-spacing: 0.1rem;
     margin: 10%;
     div {
+        font-family: var(--header-font);
         padding: 0.5rem;
         font-size: 1.5rem;
     }
