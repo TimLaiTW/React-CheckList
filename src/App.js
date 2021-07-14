@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import MasterList from './Pages/MasterList';
 import Main from './Pages/Main';
-import Login from './Components/Templates/LoginPage/LoginPage';
+import LoginPage from './Components/Templates/LoginPage/LoginPage';
 import './App.css';
 
 export default class App extends Component {
@@ -73,13 +73,12 @@ export default class App extends Component {
 
         <div className='Login-button-group'>
           {userLogin ? 
-            <button className='Login-button' onClick={this.handleUserLogin}>Default user</button>: 
+            <button className='Login-button' onClick={this.handleUserLogin}>Log out</button>: 
             <button className='Login-button' onClick={this.handleUserLogin}>Login</button>
           }
         </div>
 
-        {showUserLoginPage ? 
-        <Login />: <div></div>}
+        {showUserLoginPage && <LoginPage />}
 
         <Main 
             id={currentListId}

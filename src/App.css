@@ -13,7 +13,6 @@
   /* For Login page */
   --color-white: #ffffff;
   --color-light: #f1f5f9;
-  --color-black: #121212;
   --color-shadow: rgba(34, 35, 58, 0.2);
 
   --font-family-1: "Times New Roman", Times, serif;
@@ -58,6 +57,8 @@ body {
   font-weight: bold;
   font-size: 16px;
   font-family: var(--content-font);
+  outline: none;
+  border: none;
   text-align: center;
   text-decoration: none;
   display: inline-block;

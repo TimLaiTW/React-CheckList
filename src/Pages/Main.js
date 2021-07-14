@@ -12,6 +12,7 @@ const Div = styled.div`
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color:var(--text);
+    z-index: 0;
     `;
 export default class Main extends React.Component{
     constructor(props){

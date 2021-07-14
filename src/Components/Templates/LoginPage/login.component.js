@@ -29,7 +29,7 @@ export default class login extends Component {
             <div>
                 <h1 className="text-large">Sign in</h1>
                 <p className="text-normal">
-                    New user? <a href='/sing-up'>Create an account</a>
+                    New user? <button className="link" onClick={() => this.props.switchingToSignup()}>Create an account</button>
                 </p>
                 <form className='form' onSubmit={this.handleSubmit}>
                     <div className='form-group'>
@@ -44,9 +44,9 @@ export default class login extends Component {
 
                     <div className='form-group'>
                     <p className="text-normal">
-                        <a href='#'>Forget password?</a>
+                        <a className="link" href='#'>Forget password?</a>
                     </p>
-                    <button type='submit'>Login</button>
+                    <button className="login-submit" type='submit'>Login</button>
                 </div>
                 </form>
             </div>

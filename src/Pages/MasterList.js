@@ -4,6 +4,8 @@ import ShowMasterLists from '../Components/Templates/ShowMasterLists';
 import AddButton from '../Components/Actions/AddButton';
 import InputForm from '../Components/Templates/InputForm';
 const Div = styled.div`
+        position: absolute;
+        z-index: -1;
         background-color: var(--primary-background);
         width: 25%;
         float: left;

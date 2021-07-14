@@ -1,22 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LoginPage.css';
-import { BrowserRouter as Router, Switch, Route,  Link } from "react-router-dom";
 import Login from './login.component';
-import Signup from './singup.component';
-function LoginPage() {
-  return (
-    <Router>
+import Signup from './signup.component';
+export default class LoginPage extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+      switchToSignup: false,
+    }
+    this.handleSwitchToSignup = this.handleSwitchToSignup.bind(this);
+  }
+
+  handleSwitchToSignup = () => {
+    this.setState({switchToSignup: !this.state.switchToSignup});
+  }
+  render (){
+    return (
       <div className='auth-wrapper'>
         <div className='auth-inner'>
-          <Switch>
-            <Route path='/' exact component={Login} />      
-            <Route path='/sing-in' component={Login} />
-            <Route path='/sing-up' component={Signup} />  
-          </Switch>
+          {this.state.switchToSignup ?  
+            <Signup switchingToSignup={this.handleSwitchToSignup}/>:
+            <Login switchingToSignup={this.handleSwitchToSignup}/>
+          }
       </div>
     </div>
-    </Router>
-  );
+    );
+  }
 }
-
-export default LoginPage;

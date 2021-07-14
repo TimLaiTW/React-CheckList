@@ -37,7 +37,7 @@ export default class singup extends Component {
             <div>
                 <h1 className="text-large">Sign up</h1>
                 <p className="text-normal">
-                    Already registered? <a href='/sing-in'>Sign in</a>
+                    Already registered? <button className="link" onClick={() => this.props.switchingToSignup()}>Sign in</button>
                 </p>
                 <form className='form' onSubmit={this.handleSubmit}>
                     <div className='form-group'>
@@ -61,7 +61,7 @@ export default class singup extends Component {
                     </div>
 
                     <div className='form-group'>
-                        <button type='submit'>Submit</button>
+                        <button className="login-submit" type='submit'>Submit</button>
                     </div>
                 </form>
             </div>
