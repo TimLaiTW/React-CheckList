@@ -43,7 +43,7 @@ export default class Tasks extends Component {
     render() {
         const { taskId, task, checked, deleteTask, editTaskCheck, editTaskName } = this.props;
         return (
-            <>
+            <div>
             <ListItemBlock>
                 <CheckBox 
                     taskId={taskId}
@@ -64,7 +64,7 @@ export default class Tasks extends Component {
                     taskId={taskId}
                     deleteTask={deleteTask}/>
             </ListItemBlock>
-        </>
+        </div>
         )
     }
 }

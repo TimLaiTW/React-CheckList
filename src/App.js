@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import MasterList from './Pages/MasterList';
 import Main from './Pages/Main';
+import Login from './Components/Templates/LoginPage/LoginPage';
 import './App.css';
+
 export default class App extends Component {
   constructor(){
     super();
     this.state = {
+      user_login: false,
       masterLists: [],
       currentListId: '',
       currentListTitle: '',
@@ -49,21 +52,29 @@ export default class App extends Component {
   }
 
   render() {
+    const {user_login, masterLists, currentListId, currentListTitle,showNewListButton} = this.state;
     return (
-      <>
+      <div>
         <MasterList 
-          lists={this.state.masterLists}
+          lists={masterLists}
           addNewList={this.addNewList}
           editCurrentList={this.editCurrentList}
-          newList={this.state.showNewListButton}
+          newList={showNewListButton}
           startAddingList={this.startAddingList}
         />
 
+        <div className='Login-button'>
+          {user_login ? 
+            <div>Default user</div>: 
+            <Login />
+          }
+        </div>
+
         <Main 
-            id={this.state.currentListId}
-            title={this.state.currentListTitle}
-          />
-      </>
+            id={currentListId}
+            title={currentListTitle}
+        />
+      </div>
     )
   }
 }
