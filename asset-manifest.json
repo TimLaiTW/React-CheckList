@@ -1,20 +1,6 @@
 {
-  "files": {
-    "main.css": "/React-Checklist/static/css/main.bcb287ce.chunk.css",
-    "main.js": "/React-Checklist/static/js/main.fb3737ae.chunk.js",
-    "main.js.map": "/React-Checklist/static/js/main.fb3737ae.chunk.js.map",
-    "runtime-main.js": "/React-Checklist/static/js/runtime-main.642980a3.js",
-    "runtime-main.js.map": "/React-Checklist/static/js/runtime-main.642980a3.js.map",
-    "static/js/2.83ec470c.chunk.js": "/React-Checklist/static/js/2.83ec470c.chunk.js",
-    "static/js/2.83ec470c.chunk.js.map": "/React-Checklist/static/js/2.83ec470c.chunk.js.map",
-    "index.html": "/React-Checklist/index.html",
-    "static/css/main.bcb287ce.chunk.css.map": "/React-Checklist/static/css/main.bcb287ce.chunk.css.map",
-    "static/js/2.83ec470c.chunk.js.LICENSE.txt": "/React-Checklist/static/js/2.83ec470c.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.642980a3.js",
-    "static/js/2.83ec470c.chunk.js",
-    "static/css/main.bcb287ce.chunk.css",
-    "static/js/main.fb3737ae.chunk.js"
-  ]
+  "main.css": "static/css/main.36e28087.css",
+  "main.css.map": "static/css/main.36e28087.css.map",
+  "main.js": "static/js/main.a3d19117.js",
+  "main.js.map": "static/js/main.a3d19117.js.map"
 }
