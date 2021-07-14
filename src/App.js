@@ -8,7 +8,8 @@ export default class App extends Component {
   constructor(){
     super();
     this.state = {
-      user_login: false,
+      userLogin: false,
+      showUserLoginPage: false,
       masterLists: [],
       currentListId: '',
       currentListTitle: '',
@@ -16,6 +17,7 @@ export default class App extends Component {
     };
     this.addNewList = this.addNewList.bind(this);
     this.editCurrentList = this.editCurrentList.bind(this);
+    this.handleUserLogin = this.handleUserLogin.bind(this);
   }
 
   addNewList(list){
@@ -51,8 +53,14 @@ export default class App extends Component {
     })
   }
 
+  handleUserLogin = () => {
+    this.setState({
+      showUserLoginPage: !this.state.showUserLoginPage
+    })
+  }
+
   render() {
-    const {user_login, masterLists, currentListId, currentListTitle,showNewListButton} = this.state;
+    const {userLogin, showUserLoginPage, masterLists, currentListId, currentListTitle,showNewListButton} = this.state;
     return (
       <div>
         <MasterList 
@@ -63,12 +71,15 @@ export default class App extends Component {
           startAddingList={this.startAddingList}
         />
 
-        <div className='Login-button'>
-          {user_login ? 
-            <div>Default user</div>: 
-            <Login />
+        <div className='Login-button-group'>
+          {userLogin ? 
+            <button className='Login-button' onClick={this.handleUserLogin}>Default user</button>: 
+            <button className='Login-button' onClick={this.handleUserLogin}>Login</button>
           }
         </div>
+
+        {showUserLoginPage ? 
+        <Login />: <div></div>}
 
         <Main 
             id={currentListId}

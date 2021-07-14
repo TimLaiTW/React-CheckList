@@ -14,7 +14,6 @@
   --color-white: #ffffff;
   --color-light: #f1f5f9;
   --color-black: #121212;
-  --color-blue: #1a73e8;
   --color-shadow: rgba(34, 35, 58, 0.2);
 
   --font-family-1: "Times New Roman", Times, serif;
@@ -48,4 +47,19 @@ h2 {
 
 body {
   background-color: var(--secondory-background);
+}
+
+.Login-button-group {
+  float: right;
+}
+
+.Login-button {
+  color: var(--text);
+  font-weight: bold;
+  font-size: 16px;
+  font-family: var(--content-font);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: transparent;
 }

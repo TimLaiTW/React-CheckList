@@ -1,4 +1,4 @@
-* { 
+/* * { 
     font-size: 100%;
     font-size-adjust: 100%;
     box-sizing:border-box; 
@@ -7,7 +7,7 @@
 body, html, #root, .auth-wrapper {
     width: 100%;
     height: 100%;
-}
+} */
   
 .auth-wrapper {
     display: flex;
@@ -40,7 +40,7 @@ body, html, #root, .auth-wrapper {
 }
 
 a {
-    color: var(--color-blue);
+    color: var(--primary-background);
 }
 
 .form-group {
@@ -76,5 +76,5 @@ button {
     outline: none;
     border-radius: 2rem;
     color: var(--color-white);
-    background: var(--color-blue);
+    background-color: var(--primary-background);
 }
