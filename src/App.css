@@ -50,6 +50,7 @@ body {
 
 .Login-button-group {
   float: right;
+  margin: 2% 4% auto auto;
 }
 
 .Login-button {
@@ -60,7 +61,11 @@ body {
   outline: none;
   border: none;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   background-color: transparent;
+  text-decoration: underline;
+}
+
+.Login-button:hover {
+  color: var(--primary-background);
 }
